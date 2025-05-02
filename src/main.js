@@ -14,8 +14,11 @@ import { Observable } from "rxjs";
 //   console.log("haleem speaking");
 // }
 
+url = "https://jsonplaceholder.typicode.com/posts";
+
 const observable = new Observable((obs) => {
   obs.next(1);
+  obs.fetch(url);
   obs.next(2);
 });
 
